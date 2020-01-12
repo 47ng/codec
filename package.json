@@ -1,6 +1,6 @@
 {
   "name": "@47ng/codec",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js",
   "main": "dist/index.js",
   "license": "MIT",
