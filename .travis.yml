@@ -1,4 +1,5 @@
 language: node_js
+version: 1.0
 
 node_js:
   - node
@@ -7,15 +8,18 @@ cache: yarn
 
 script:
   - yarn ci
-
 deploy:
+  edge: true
   provider: npm
   email: accounts@francoisbest.com
+  api_key:
+    secure: NwiczayIHrewM9h9oG/LT2PWlrJcCeuleTJOpVypzRwBKFryOhLMUKWW8NeWkidJq56m5fptQeqifQ/xWNp+23XY6WO6ybRKC3cA1dF4Tf1atu0yEujKXtvPDfMb400YroNkcsb7ZhzVumO7TDYiPmpU90o8indX4F8WMlpNPqdZnHy15jY+ceTZvS41E5vtFWjtEhMH4jjhL1KCFOUjnLa34fG0H7pqoPoU19Im2Bv/6AfFrqyURHaYm8hmH6dkXQVgAWj8Q0PUQjg/LOvUZk/mKvvHpecy+XqLh7vWwBv94dLXOYGKEs7ZtKAWoZBvWVyoyNq1sSVZ18LviFSa5uXc8BdsNkWklanmQKmWoTEgTSd+ltaxVuUeiIZSNdLCZEkIxKK9Ej/sryjPL+gqxZLEA63roecvYna80IFEGj/XcAT5mGVpESb6UIzDJWizOLto+T/HB3RCoQyBYPvSM5Jgg6VUxXc5v0hAfQWmFfkcy1jyHsSiZ3sIxb2oaQ4rsKFrvuA7j6GshRlWJNkpiI2kCA5XVyXAe/fvLY4e9MkJJqlw6aEde4WYUHITHADG1H9gCTEKiVlYle3KUdaT3FXJV4uoqN1Psshw8yvAGI3chViaFcCYu8Tbr4NVokL5O2WZilDoPCOd77OhCr3PxWALnUBkkFyulxHKeZ83AGQ=
   on:
     tags: true
   skip_cleanup: true
-
 notifications:
   slack:
+    rooms:
+      secure: AAUMXkqgAzkB6NGUCb7qDc5cjvlQJ9nmwUxDLmEKoCv9OifhV/bm+j6UoZpwFqNdXhPcbw9wDLjaaZbGd689Zt2W8mVjwC8E8gp1yGRouEr04gdHNPIi/vZtZiUtBftNdEMY8amzw0x7rmjX67gwvwO7XW2Rz4U9POrofuecmIebxs4ykWCzcOEytRJu5H2T39WZ4/EaXJD0PrXy49GIbUPKp4Bh3zlgVePZNm614JRJdQF1USl6VVKTLK1OTeQt21AYARgqkLljXoWxvCvNW2aDIgF+BVEfKpUNu7amEernwR2F2NBhghPWeI+4YxAmFjIpW/QujEy8xbf2ekq8QXgrEzQUzb5gdxMM88mGVCbD7ur7IeMOSBLYtOHMZRdbr9u3B/Lz9HbP+90R/Ito8cxu9kUF2qyjk8OkJwfwYMrUClt/VajP7iwNMUHu61jLw/ZMfKZ0laM5eWIWCymbI3bjXITIDKDmKqrXxfhNEDLfuEN9T8HwwzU80PgvNquXZUD7XjbE3y0GK81fXNGDx+3HPDlfXMurmJAE2BLi/RoNXoCcSI6Cv50jTuWEV71rcMcuGwfrWhjAIxhmvueBlzwilQU53nzE9q2PfN8qz+A3nOjTksFukRiNuuKDHzZfHaT/AH1yFPPLnmKuGO+6dxnlnUa81P6v3hTYzXTRLwY=
     on_success: change
     on_failure: always
