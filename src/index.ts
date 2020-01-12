@@ -12,7 +12,8 @@ export const b64 = {
   },
   decode: function b64Decode(input: string): Uint8Array {
     if (typeof Buffer !== 'undefined') {
-      return Buffer.from(input, 'base64')
+      const buf = Buffer.from(input, 'base64')
+      return new Uint8Array(buf, 0, buf.length)
     }
     return decodeURLSafe(b64.urlSafe(input))
   }
@@ -39,7 +40,8 @@ export const hex = {
   },
   decode: function HexDecode(input: string): Uint8Array {
     if (typeof Buffer !== 'undefined') {
-      return Buffer.from(input, 'hex')
+      const buf = Buffer.from(input, 'hex')
+      return new Uint8Array(buf, 0, buf.length)
     }
     return decodeHex(input)
   }
