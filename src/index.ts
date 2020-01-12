@@ -27,7 +27,8 @@ export const utf8 = {
     return utf8Decoder.decode(input)
   },
   encode: function Utf8Encode(input: string): Uint8Array {
-    return utf8Encoder.encode(input)
+    const buf = utf8Encoder.encode(input)
+    return new Uint8Array(buf, 0, buf.length)
   }
 }
 
