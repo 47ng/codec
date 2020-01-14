@@ -8,6 +8,7 @@ cache: yarn
 
 script:
   - yarn ci
+
 deploy:
   edge: true
   provider: npm
@@ -17,9 +18,10 @@ deploy:
   on:
     tags: true
   skip_cleanup: true
+
 notifications:
   slack:
     rooms:
-      secure: AAUMXkqgAzkB6NGUCb7qDc5cjvlQJ9nmwUxDLmEKoCv9OifhV/bm+j6UoZpwFqNdXhPcbw9wDLjaaZbGd689Zt2W8mVjwC8E8gp1yGRouEr04gdHNPIi/vZtZiUtBftNdEMY8amzw0x7rmjX67gwvwO7XW2Rz4U9POrofuecmIebxs4ykWCzcOEytRJu5H2T39WZ4/EaXJD0PrXy49GIbUPKp4Bh3zlgVePZNm614JRJdQF1USl6VVKTLK1OTeQt21AYARgqkLljXoWxvCvNW2aDIgF+BVEfKpUNu7amEernwR2F2NBhghPWeI+4YxAmFjIpW/QujEy8xbf2ekq8QXgrEzQUzb5gdxMM88mGVCbD7ur7IeMOSBLYtOHMZRdbr9u3B/Lz9HbP+90R/Ito8cxu9kUF2qyjk8OkJwfwYMrUClt/VajP7iwNMUHu61jLw/ZMfKZ0laM5eWIWCymbI3bjXITIDKDmKqrXxfhNEDLfuEN9T8HwwzU80PgvNquXZUD7XjbE3y0GK81fXNGDx+3HPDlfXMurmJAE2BLi/RoNXoCcSI6Cv50jTuWEV71rcMcuGwfrWhjAIxhmvueBlzwilQU53nzE9q2PfN8qz+A3nOjTksFukRiNuuKDHzZfHaT/AH1yFPPLnmKuGO+6dxnlnUa81P6v3hTYzXTRLwY=
+      secure: PmwRHzT63UsRwtUeyhtQX/FoGFhrx0VrsU6p6sfDPHUUbWWQ4LM07Y7hYzrjzsep1znSVnFzJ9lcdSfi+Dji1E5sgxEGYw2obJKhdZKZ/iz1F3ePm4Nl+7G9/r9NhEb0ok4nuv1CWEcWqagqFWWClybYLGfKk94k/nNtHZreM1I0nyoaUwNiSDrxfrkQ5f0ynkZ375JAPMmKHqB9XWepQkU0vIlZH+CW3gESZqiTYiKCoHjr1nxjTOSVQ+44XhR+yb15PDB+XGdC5oAGGcbmxMi0vtn4gw38sFMkRgtNQhLdptzoFTV+wEyLe+fTmXO72lbCGRC5pqiSEf6mUEMpUB1ly0o5E89p7vK8l4GhQtRRCJFMa/+LL1VoWweJdurUtI0HTI5/zHlOkpblhEHAhHqC9P1VUFOZ11qTsaZ/qomZ3JaUKdVbZMRDI7h49S1GpFvoNtvWyhGVCHpp22VJr/ZYw9SMN26QdVrQro5RMEUjP9vAuvQ1ZWywozRqbWi1shtiak5f3KVEsCCLoVBbwYBHR2vJoHYuJiU8NdLPmo9wFVcwgTVPuMHNo0k+X4poZIeWhLBfve5xz9oM75/lLaHHp0PshLeeAU8KN24z5tKljuUGpvfW+ifeWLUoSb7934jfpcMEDUE5mQM2Pm2MMOFeVmSm9358YjEPEudIUUQ=
     on_success: change
     on_failure: always
