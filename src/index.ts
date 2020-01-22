@@ -40,6 +40,9 @@ export const hex = {
     return encodeHex(input, true)
   },
   decode: function HexDecode(input: string): Uint8Array {
+    if (input.length % 2 !== 0) {
+      input = '0' + input
+    }
     if (typeof Buffer !== 'undefined') {
       const buf = Buffer.from(input, 'hex')
       return new Uint8Array(buf, 0, buf.length)
