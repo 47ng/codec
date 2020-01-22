@@ -1,7 +1,9 @@
 # `@47ng/codec`
 
+[![NPM](https://img.shields.io/npm/v/@47ng/codec?color=red)](https://www.npmjs.com/package/codec)
 [![MIT License](https://img.shields.io/github/license/47ng/codec.svg?color=blue)](https://github.com/47ng/codec/blob/master/LICENSE)
 [![Travis CI Build](https://img.shields.io/travis/com/47ng/codec.svg)](https://travis-ci.com/47ng/codec)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=47ng/codec)](https://dependabot.com)
 [![Average issue resolution time](https://isitmaintained.com/badge/resolution/47ng/codec.svg)](https://isitmaintained.com/project/47ng/codec)
 [![Number of open issues](https://isitmaintained.com/badge/open/47ng/codec.svg)](https://isitmaintained.com/project/47ng/codec)
 
