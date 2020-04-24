@@ -43,4 +43,27 @@ describe('Base64', () => {
     const received = utf8.decode(b64.decode(message))
     expect(received).toEqual(expected)
   })
+
+  test('urlSafe', () => {
+    expect(b64.urlSafe('')).toEqual('')
+    expect(b64.urlSafe('foo')).toEqual('foo')
+    expect(b64.urlSafe('foo+bar/egg-spam_qux')).toEqual('foo-bar_egg-spam_qux')
+    expect(b64.urlSafe('foo+bar+egg+spam+qux')).toEqual('foo-bar-egg-spam-qux')
+    expect(b64.urlSafe('foo/bar/egg/spam/qux')).toEqual('foo_bar_egg_spam_qux')
+    expect(b64.urlSafe('foo==')).toEqual('foo==') // Padding is preserved
+  })
+  test('urlUnsafe', () => {
+    expect(b64.urlUnsafe('')).toEqual('')
+    expect(b64.urlUnsafe('foo')).toEqual('foo')
+    expect(b64.urlUnsafe('foo+bar/egg-spam_qux')).toEqual(
+      'foo+bar/egg+spam/qux'
+    )
+    expect(b64.urlUnsafe('foo-bar-egg-spam-qux')).toEqual(
+      'foo+bar+egg+spam+qux'
+    )
+    expect(b64.urlUnsafe('foo_bar_egg_spam_qux')).toEqual(
+      'foo/bar/egg/spam/qux'
+    )
+    expect(b64.urlUnsafe('foo==')).toEqual('foo==') // Padding is preserved
+  })
 })

@@ -2,10 +2,9 @@
 
 [![NPM](https://img.shields.io/npm/v/@47ng/codec?color=red)](https://www.npmjs.com/package/@47ng/codec)
 [![MIT License](https://img.shields.io/github/license/47ng/codec.svg?color=blue)](https://github.com/47ng/codec/blob/master/LICENSE)
-[![Travis CI Build](https://img.shields.io/travis/com/47ng/codec.svg)](https://travis-ci.com/47ng/codec)
+[![Continuous Integration](https://github.com/47ng/codec/workflows/Continuous%20Integration/badge.svg?branch=next)](https://github.com/47ng/codec/actions)
+[![Coverage Status](https://coveralls.io/repos/github/47ng/codec/badge.svg?branch=next)](https://coveralls.io/github/47ng/codec?branch=next)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=47ng/codec)](https://dependabot.com)
-[![Average issue resolution time](https://isitmaintained.com/badge/resolution/47ng/codec.svg)](https://isitmaintained.com/project/47ng/codec)
-[![Number of open issues](https://isitmaintained.com/badge/open/47ng/codec.svg)](https://isitmaintained.com/project/47ng/codec)
 
 Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js
 
@@ -28,6 +27,11 @@ Available codecs:
 > Watch out !
 > `utf8` uses a different convention than the other codecs (encode and decode
 > are swapped), to reflect how `TextEncoder` and `TextDecoder` behave.
+
+## Support
+
+- Node.js: >=11.x
+- Browser: See [caniuse](https://caniuse.com/#feat=textencoder) for `TextEncoder` / `TextDecoder`
 
 ## Examples
 

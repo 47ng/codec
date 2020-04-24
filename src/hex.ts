@@ -5,7 +5,8 @@ const hex = {
     if (typeof Buffer !== 'undefined') {
       return Buffer.from(input, 0, input.length).toString('hex')
     }
-    return encodeHex(input, true)
+    const lowerCase = true
+    return encodeHex(input, lowerCase)
   },
   decode: function HexDecode(input: string): Uint8Array {
     if (input.length % 2 !== 0) {
