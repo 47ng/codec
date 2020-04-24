@@ -7,3 +7,4 @@ yarn-error.log
 src/**
 coverage/
 .dependabot/
+test/
