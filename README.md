@@ -150,4 +150,4 @@ convert('Hello, World!', 'utf8', 'hex')
 
 ## License
 
-[MIT](https://github.com/47ng/codec/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com).
+[MIT](https://github.com/47ng/codec/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com) - [Donations welcome](https://paypal.me/francoisbest?locale.x=fr_FR) 🙏
