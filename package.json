@@ -3,6 +3,7 @@
   "version": "0.0.0-semantically-released",
   "description": "Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "author": {
     "name": "François Best",
