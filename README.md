@@ -2,9 +2,9 @@
 
 [![NPM](https://img.shields.io/npm/v/@47ng/codec?color=red)](https://www.npmjs.com/package/@47ng/codec)
 [![MIT License](https://img.shields.io/github/license/47ng/codec.svg?color=blue)](https://github.com/47ng/codec/blob/master/LICENSE)
-[![Continuous Integration](https://github.com/47ng/codec/workflows/Continuous%20Integration/badge.svg?branch=next)](https://github.com/47ng/codec/actions)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/47ng/codec/Continuous%20Integration/next?label=CI)
 [![Coverage Status](https://coveralls.io/repos/github/47ng/codec/badge.svg?branch=next)](https://coveralls.io/github/47ng/codec?branch=next)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=47ng/codec)](https://dependabot.com)
+![NPM Downloads](https://img.shields.io/npm/dm/@47ng/codec)
 
 Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js
 
@@ -150,4 +150,7 @@ convert('Hello, World!', 'utf8', 'hex')
 
 ## License
 
-[MIT](https://github.com/47ng/codec/blob/master/LICENSE) - Made with ❤️ by [François Best](https://francoisbest.com) - [Donations welcome](https://paypal.me/francoisbest?locale.x=fr_FR) 🙏
+[MIT](https://github.com/47ng/codec/blob/master/LICENSE) - Made with ❤️ by
+[François Best](https://francoisbest.com).
+
+Using this package at work ? [Sponsor me](https://github.com/sponsors/franky47) to help with support and maintenance.
