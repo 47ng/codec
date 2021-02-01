@@ -31,7 +31,7 @@ jobs:
 
       # Continuous Delivery Pipeline --
 
-      - uses: codfish/semantic-release-action@325861fef675efe314060ac325a61dde726ec607
+      - uses: codfish/semantic-release-action@4c8b6b54fd5837bd125debe55b21790b56b05f93
         name: Semantic Release
         id: semantic
         env:
