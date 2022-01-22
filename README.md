@@ -1,4 +1,6 @@
-# `@47ng/codec`
+<h1 align="center"><code>@47ng/codec</code></h1>
+
+<div align="center">
 
 [![NPM](https://img.shields.io/npm/v/@47ng/codec?color=red)](https://www.npmjs.com/package/@47ng/codec)
 [![MIT License](https://img.shields.io/github/license/47ng/codec.svg?color=blue)](https://github.com/47ng/codec/blob/master/LICENSE)
@@ -6,15 +8,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/47ng/codec/badge.svg?branch=next)](https://coveralls.io/github/47ng/codec?branch=next)
 ![NPM Downloads](https://img.shields.io/npm/dm/@47ng/codec)
 
-Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js
+</div>
 
-## Installation
-
-```shell
-$ yarn add @47ng/codec
-# or
-$ npm i @47ng/codec
-```
+<p align="center">
+  Universal conversion of Uint8Array from/into UTF-8, base64url and hex in the browser and Node.js
+</p>
 
 ## Features
 
@@ -23,10 +21,20 @@ Available codecs:
 - `utf8` - UTF-8
 - `b64` - Base 64 URL ([RFC-4648, Section 5](https://tools.ietf.org/html/rfc4648#section-5))
 - `hex` - Hexadecimal, lowercase
+- Simple conversion between string representation
+- Encoding detection
 
 > Watch out !
 > `utf8` uses a different convention than the other codecs (encode and decode
 > are swapped), to reflect how `TextEncoder` and `TextDecoder` behave.
+
+## Installation
+
+```shell
+$ yarn add @47ng/codec
+# or
+$ npm i @47ng/codec
+```
 
 ## Support
 
