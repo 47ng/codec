@@ -111,19 +111,39 @@ const backToBase64 = hex.encode(uint8Array)
 
 ### Utilities
 
-The library exports convenience methods for hex to/from base64 conversions:
+The library exports convenience methods for converting from one string
+representation to another:
 
 ```ts
-import { hexToBase64url, base64ToHex } from '@47ng/codec'
+import {
+  hexToBase64url,
+  base64ToHex,
+  utf8ToBase64,
+  base64toUTF8,
+  utf8ToHex,
+  hexToUTF8
+} from '@47ng/codec'
 
-const hex = base64ToHex('SGVsbG8sIFdvcmxkICE=')
+base64ToHex('SGVsbG8sIFdvcmxkICE=')
 // 48656c6c6f2c20576f726c642021
 
-const b64 = hexToBase64url('48656c6c6f2c20576f726c642021')
+hexToBase64url('48656c6c6f2c20576f726c642021')
 // SGVsbG8sIFdvcmxkICE=
+
+utf8ToBase64('Hello, World !')
+// SGVsbG8sIFdvcmxkICE=
+
+base64toUTF8('SGVsbG8sIFdvcmxkICE=')
+// Hello, World !
+
+utf8ToHex('Hello, World !')
+// 48656c6c6f2c20576f726c642021
+
+hexToUTF8('48656c6c6f2c20576f726c642021')
+// Hello, World !
 ```
 
-As well as encoder / decoder objects with strong TypeScript types, to help you
+It also exports encoder / decoder objects with strong TypeScript types, to help you
 build your own encoders & decoders:
 
 ```ts
@@ -146,6 +166,20 @@ convert('Hello, World!', 'utf8', 'base64')
 
 convert('Hello, World!', 'utf8', 'hex')
 // 48656c6c6f2c20576f726c642021
+```
+
+You can detect the encoding of a string:
+
+```ts
+import { detectEncoding } from '@47ng/codec'
+
+detectEncoding('baadf00dcafebabe') // hex
+
+// Both variants of base64 are detected
+detectEncoding('SGVs+G8s/FdvcmxkICE=') // base64
+detectEncoding('SGVs-G8s_FdvcmxkICE=') // base64
+
+detectEncoding('not hex not base64') // utf8
 ```
 
 ## License
